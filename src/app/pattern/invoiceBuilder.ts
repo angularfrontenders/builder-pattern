@@ -1,8 +1,9 @@
 import { BuilderTemplate } from './builderTemplate';
 
 import { IInvoice } from './iInvoice';
+import { IInvoiceBuilder } from './iInvoiceBuilder';
 
-export class InvoiceBuilder extends BuilderTemplate<IInvoice> {
+export class InvoiceBuilder extends BuilderTemplate<IInvoice> implements IInvoiceBuilder {
 
     protected initialize(): IInvoice {
         return {
@@ -12,17 +13,17 @@ export class InvoiceBuilder extends BuilderTemplate<IInvoice> {
         };
     }
 
-    public invoiceDate(invoiceDate: Date): InvoiceBuilder {
+    public invoiceDate(invoiceDate: Date): IInvoiceBuilder {
         this._model.invoiceDate = invoiceDate;
         return this;
     }
 
-    public invoiceNumber(invoiceNumber: string): InvoiceBuilder {
+    public invoiceNumber(invoiceNumber: string): IInvoiceBuilder {
         this._model.invoiceNumber = invoiceNumber;
         return this;
     }
 
-    public totalAmount(totalAmount: number): InvoiceBuilder {
+    public totalAmount(totalAmount: number): IInvoiceBuilder {
         this._model.totalAmount = totalAmount;
         return this;
     }
