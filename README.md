@@ -1,3 +1,5 @@
+Important: This repository was moved to an Nx monorepo at https://github.com/angularfrontenders/monorepo
+
 # BuilderPattern
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
